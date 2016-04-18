@@ -1,25 +1,73 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="J9D-Ei-dgh">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--WeatherViewController-->
+        <scene sceneID="JeH-ba-pHZ">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="J9D-Ei-dgh" userLabel="WeatherViewController" customClass="WeatherViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="PVE-gS-jrC"/>
+                        <viewControllerLayoutGuide type="bottom" id="uda-2w-EGF"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="view" contentMode="scaleToFill" id="uIC-i3-kkf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="hS2-tI-e2k">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCv-yn-tar">
+                                <rect key="frame" x="16" y="120" width="308" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="DzG-Bv-Ig1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yaB-9h-eXa">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="J9D-Ei-dgh" id="T3s-M1-MLo"/>
+                                    <outlet property="delegate" destination="J9D-Ei-dgh" id="dDX-8I-CgM"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="yaB-9h-eXa" secondAttribute="trailing" id="5Zg-Df-d4S"/>
+                            <constraint firstItem="uda-2w-EGF" firstAttribute="top" secondItem="hS2-tI-e2k" secondAttribute="bottom" id="Cv4-c9-Gsm"/>
+                            <constraint firstItem="hS2-tI-e2k" firstAttribute="leading" secondItem="uIC-i3-kkf" secondAttribute="leading" id="Dz6-gr-pJS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rCv-yn-tar" secondAttribute="trailing" constant="-20" id="E79-G6-amp"/>
+                            <constraint firstItem="rCv-yn-tar" firstAttribute="leading" secondItem="uIC-i3-kkf" secondAttribute="leadingMargin" id="I8x-EX-RgC"/>
+                            <constraint firstItem="uda-2w-EGF" firstAttribute="top" secondItem="yaB-9h-eXa" secondAttribute="bottom" id="R8A-mB-3U0"/>
+                            <constraint firstItem="uda-2w-EGF" firstAttribute="top" secondItem="yaB-9h-eXa" secondAttribute="bottom" id="SMt-q8-2Qs"/>
+                            <constraint firstItem="hS2-tI-e2k" firstAttribute="top" secondItem="PVE-gS-jrC" secondAttribute="bottom" id="UZY-iv-xqm"/>
+                            <constraint firstItem="rCv-yn-tar" firstAttribute="top" secondItem="PVE-gS-jrC" secondAttribute="bottom" constant="100" id="jDX-ch-2IL"/>
+                            <constraint firstItem="yaB-9h-eXa" firstAttribute="top" secondItem="PVE-gS-jrC" secondAttribute="bottom" id="nkR-mz-k3b"/>
+                            <constraint firstAttribute="trailing" secondItem="hS2-tI-e2k" secondAttribute="trailing" id="oWY-JJ-8ir"/>
+                            <constraint firstItem="yaB-9h-eXa" firstAttribute="leading" secondItem="uIC-i3-kkf" secondAttribute="leading" id="rlO-f2-TJo"/>
+                            <constraint firstItem="yaB-9h-eXa" firstAttribute="top" secondItem="PVE-gS-jrC" secondAttribute="bottom" id="yWI-cm-b4j"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="statusLabel" destination="rCv-yn-tar" id="Qwx-DL-BHL"/>
+                        <outlet property="tableView" destination="yaB-9h-eXa" id="TOY-F9-2Vo"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sbr-Qg-XOJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="30" y="404"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background.jpg" width="2333" height="3500"/>
+    </resources>
 </document>

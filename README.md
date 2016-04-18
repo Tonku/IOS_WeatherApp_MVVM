@@ -2,7 +2,7 @@
 
 ![Simulator Screen Shot 11-Apr-2016 7.37.57 am.png](https://bitbucket.org/repo/KpyKbx/images/1622827225-Simulator%20Screen%20Shot%2011-Apr-2016%207.37.57%20am.png)
 
-### WestpacSample  info ###
+### Application  Details ###
 
 * Sample made using ObjectiveC
 * All the data from the weather web service is consumed

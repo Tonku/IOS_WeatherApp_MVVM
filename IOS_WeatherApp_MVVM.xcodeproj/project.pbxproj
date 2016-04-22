@@ -26,6 +26,7 @@
 		EA262E541CC4B8A300EB05D3 /* Mantle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EA262E521CC4B8A300EB05D3 /* Mantle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EA262E581CC4B8CA00EB05D3 /* DailyWeatherCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = EA262E571CC4B8CA00EB05D3 /* DailyWeatherCondition.m */; };
 		EA262E5B1CC4B8FA00EB05D3 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA262E5A1CC4B8FA00EB05D3 /* CustomTableViewCell.m */; };
+		EA7EEB7E1CC9C82A0039E072 /* Mantle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA262E501CC4B89700EB05D3 /* Mantle.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA7EEB7E1CC9C82A0039E072 /* Mantle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +473,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = IOS_WeatherApp_MVVMTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "WP.IOS-WeatherApp-MVVMTests";
@@ -483,6 +489,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = IOS_WeatherApp_MVVMTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "WP.IOS-WeatherApp-MVVMTests";
@@ -510,6 +520,7 @@
 				EA262E301CC4AC0A00EB05D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA262E311CC4AC0A00EB05D3 /* Build configuration list for PBXNativeTarget "IOS_WeatherApp_MVVMTests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +529,7 @@
 				EA262E331CC4AC0A00EB05D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

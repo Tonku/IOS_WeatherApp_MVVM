@@ -43,7 +43,7 @@
         
     }
     
-    [self.locationManager startUpdatingLocation];
+   
 }
 - (CLLocationManager *)createLocationManager
 {
@@ -90,13 +90,7 @@
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     
     
-    static BOOL once ;
-    
-    if (!once) {
-        
-        once = YES;
-        return;
-    }
+   
     CLLocation *location = [locations lastObject];
    
     if (location.horizontalAccuracy > 0) {

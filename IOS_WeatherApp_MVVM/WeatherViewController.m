@@ -40,6 +40,7 @@ static void * WeatherContext = &WeatherContext;
                                                object:nil];
     self.statusLabel.text = @"Fetching weather...";
     self.tableView.hidden = YES;
+     
  }
 #pragma mark - Notifications and KVO
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change

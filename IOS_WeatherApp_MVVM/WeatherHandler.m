@@ -37,7 +37,6 @@
     return self;
 }
 #pragma mark Weather fetch
-
 //Download weather info as json and convert it to Mantle model objects
 -(void)getWeatherInLocation:(CLLocation*)location{
     
@@ -65,8 +64,6 @@
         requstInProgress = NO;
     } ];
      
-
-
 }
 
 

@@ -201,7 +201,8 @@
             
             NSError* error = nil;
             WeatherForecast* weatherForcast = [MTLJSONAdapter modelOfClass:WeatherForecast.class
-                                                        fromJSONDictionary:weatherDataInJson error:&error];
+                                                       fromJSONDictionary:weatherDataInJson error:&error];
+            XCTAssertNotNil(weatherForcast, "weatherForcast cannot be nil");
             
         }];
         dispatch_semaphore_signal(self.semaphoreAsyncCallWait);
@@ -244,6 +245,8 @@
     
     //Then
     XCTAssertEqual(value1, value2);//This should be equal
+    
+    XCTAssert(NO);
 }
 
 @end

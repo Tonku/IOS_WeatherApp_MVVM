@@ -28,7 +28,6 @@
     map[@"maximumApparentTemperature"] = @"apparentTemperatureMax";
     map[@"timeOfMaximumApparentTemperature"] = @"apparentTemperatureMaxTime";
     return map;
-    
 }
 
 //Custom transformation is needed only for time

@@ -71,6 +71,7 @@
     
     // Request a location update
     [self.locationManager requestLocation];
+   // [self.locationManager startUpdatingLocation];
 }
 
 //Respond to location errors if any, not handled currently
